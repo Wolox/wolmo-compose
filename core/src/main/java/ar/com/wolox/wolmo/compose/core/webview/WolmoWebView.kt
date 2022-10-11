@@ -30,7 +30,6 @@ fun WolmoWebView(url: String) {
                     webViewClient = object : WebViewClient() {
                         override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
                             backEnabled = view.canGoBack()
-                            view.settings.javaScriptEnabled = true
                             view.settings.domStorageEnabled = true
                         }
                     }
