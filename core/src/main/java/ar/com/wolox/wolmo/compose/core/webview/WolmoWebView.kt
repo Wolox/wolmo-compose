@@ -40,7 +40,9 @@ fun WolmoWebView(url: String) {
                 webView = it
             })
         BackHandler(enabled = backEnabled) {
-            webView?.goBack()
+            if (webView?.canGoBack() == true) {
+                webView?.goBack()
+            }
         }
     }
 }
